@@ -1,0 +1,27 @@
+.content__voltar > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: white;
+ 
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+
+.content__voltar a {
+  padding: 5px;
+}
+
+.content__voltar a:hover {
+  padding: 3px;
+
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.content__voltar a p {
+  margin-left: 5px;
+}
