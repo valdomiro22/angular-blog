@@ -1,5 +1,4 @@
 .container__small-card {
-  width: 700px;
   margin-bottom: 15px;
 }
 
@@ -9,21 +8,26 @@
   flex-direction: row;
 }
 
-
 .small-card_photo > img {
   width: 200px;
   min-width: 200px;
   margin-right: 20px;
 }
 
-.small-card_title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .small-card_title h1 {
   font-size: 20px;
+}
+
+.small-card_descricao {
+  margin-top: 10px;
+}
+
+.small-card_descricao p {
+  margin-bottom: 3px;
+}
+
+.small-card_descricao a:hover {
+  color: cadetblue;
 }
 
 .container__small-card__separator {
