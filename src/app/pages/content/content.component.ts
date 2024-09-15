@@ -1,13 +1,37 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from '../../data/dataFake';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })
-export class ContentComponent {
+export class ContentComponent implements OnInit {
   @Input() voltar: string = '/home';
-  @Input() photoCover: string = 'https://assets-prd.ignimgs.com/2024/04/08/rdj-1712596877032.jpg';
-  @Input() contentTitle: string = 'Minha notícia';
-  @Input() contentDescription: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iusto cumque minus beatae maiores ea earum quod accusantium laborum dignissimos, deleniti quo harum suscipit, molestiae aut corrupti itaque veniam dicta.';
+  @Input() photoCover: string = '';
+  @Input() contentTitle: string = '';
+  @Input() contentDescription: string = '';
+
+  private id: string | null = '0';
+
+  constructor(
+    private route: ActivatedRoute
+  ) {}
+
+ngOnInit(): void {
+    this.route.paramMap.subscribe( value =>
+      this.id = value.get('Id')
+    )
+
+    this.setValuesToComponent(this.id)
+  }
+
+  setValuesToComponent(id: string | null) {
+    const result = dataFake.filter(article => article.id == id)[0];
+
+    this.photoCover = result.photoCover;
+    this.contentTitle = result.title;
+    this.contentDescription = result.description;
+  }
 }

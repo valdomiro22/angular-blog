@@ -17,9 +17,13 @@
 }
 
 .small-card_title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.small-card_title h1 {
+  font-size: 20px;
 }
 
 .container__small-card__separator {

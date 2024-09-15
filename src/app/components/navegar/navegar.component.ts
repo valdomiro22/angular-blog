@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class NavegarComponent {
   @Input() runFor: string = '';
   @Input() label: string = '';
+  @Input() icon: string = '';
 }

@@ -9,8 +9,8 @@ import { BigCardComponent } from './components/big-card/big-card.component';
 import { SmallCardComponent } from './components/small-card/small-card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContentComponent } from './pages/content/content.component';
-import {MatIconModule} from '@angular/material/icon';
-import { NavegarComponent } from './components/voltar/navegar.component';
+import { MatIconModule } from '@angular/material/icon';
+import { NavegarComponent } from './components/navegar/navegar.component';
 
 @NgModule({
   declarations: [
